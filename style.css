@@ -1,9 +1,9 @@
 @font-face {
     font-family: "TT Lakes Regular";
     font-style: normal;
-    src: url("../fonts/TTLakes-Regular.eot") format('embedded-opentype'),
-    url("../fonts/TTLakes-Regular.ttf") format('ttf'),
-    url("../fonts/TTLakes-Regular.woff") format('woff');
+    src: url("./fonts/TTLakes-Regular.eot") format('embedded-opentype'),
+    url("./fonts/TTLakes-Regular.ttf") format('ttf'),
+    url("./fonts/TTLakes-Regular.woff") format('woff');
 }
 
 *{
