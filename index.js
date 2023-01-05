@@ -55,40 +55,39 @@ const swiper = new Swiper('.swiper', {
 //     windowWidthControl();
 // })
 
-window.addEventListener('resize', function () {
-    windowWidthControl();
-})
+// window.addEventListener('resize', function () {
+//     windowWidthControl();
+// })
 
 
 
-const items = document.querySelectorAll('.container__items');
+const items = document.querySelectorAll('.hidden');
 console.log(items);
 
-const hidden = items.filter(item => items.length > 8);
-console.log(hidden);
+const showMore = document.querySelector('.show-more');
 
 const btn = document.querySelector('.arrow');
 console.log(btn);
 
-// items.forEach(function(item, i) {
-//         if (i > 5) {
-//             ipadHidden.push(item);
-//         } else{
-//             ipadVisible.push(item);
-//         };
-//         console.log(ipadHidden);
-//     } 
-// );
+const text = document.querySelector('.text');
 
-// btn.addEventListener('click', () => {
-//     console.log(items.classlist);
-//     if (items.classlist('hidden')) {
-//         btn.textContent = 'Скрыть';
-//     } else {
-//         btn.textContent = 'Показать элемент';
-//     }
-//     items.classlist.toggle('hidden')
-// });
+btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    items.forEach((item, index) => {
+        if(index > 3){
+        } else{
+            item.classList.toggle('active');
+            console.log(item);
+        }
+    })
+    showMore.classList.toggle('active');
+    btn.classList.toggle('rotate');
+    if(text.textContent == 'Показать все') {
+        text.textContent = 'Скрыть';
+    } else {
+        text.textContent = 'Показать все';
+    }
+})
 
 
 
