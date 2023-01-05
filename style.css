@@ -137,7 +137,6 @@ body{
 }
 
 @media (min-width: 1115px) {
-    @media (min-width: 760px) {
         body{
             min-width: 1120px;
             background: #F2F2F2;
@@ -200,5 +199,56 @@ body{
         .arrow{
             margin-right: 16px;
         }
+}
+
+@media (min-width: 1530px) {
+    body{
+        min-width: 1120px;
+        background: #F2F2F2;
+    }
+
+    .wrapper{
+        display: none;
+    }
+
+    .wrapper-2{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container-2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-width: 100vw;
+        margin-bottom: 24px;
+    }
+    .container__items,
+    .container__items-2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 224px;
+        height: 72px;
+        background-color: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 16px;
+    }
+    
+
+    .hidden{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .show-more{
+        display: none;
+    }
+
+    .active{
+        opacity: 1;
     }
 }
