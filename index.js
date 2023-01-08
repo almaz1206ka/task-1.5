@@ -1,66 +1,83 @@
 
-const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 16,
-    slidesPerView: 1.31,
-    variableWidth: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'bullets',
-        bulletElement: 'span',
-        bulletClass: 'swiper-pagination-bullet',
-        bulletActiceClass: 'swiper-pagination-bullet-active',
-    },
-    breakpoints: {
-        400: {
-            slidesPerView: 2.5,
-            spaceBetween: 16,
-        } 
-    }
-});
-
-
-
-
-
-// function windowWidthControl() {
-//     if(window.screen.width < '365') {
-//         const swiper = new Swiper('.swiper', {
-//             direction: 'horizontal',
-//             loop: true,
+// let swiper = new Swiper('.swiper', {
+//     direction: 'horizontal',
+//     loop: true,
+//     spaceBetween: 16,
+//     slidesPerView: 1.31,
+//     variableWidth: true,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//         type: 'bullets',
+//         bulletElement: 'span',
+//         bulletClass: 'swiper-pagination-bullet',
+//         bulletActiceClass: 'swiper-pagination-bullet-active',
+//     },
+//     breakpoints: {
+//         400: {
+//             slidesPerView: 2.15,
 //             spaceBetween: 16,
-//             slidesPerView: 1.31,
-//             variableWidth: true,
-//             pagination: {
-//                 el: '.swiper-pagination',
-//                 clickable: true,
-//                 type: 'bullets',
-//                 bulletElement: 'span',
-//                 bulletClass: 'swiper-pagination-bullet',
-//                 bulletActiceClass: 'swiper-pagination-bullet-active',
-//             },
-//             breakpoints: {
-//                 400: {
-//                     slidesPerView: 2.5,
-//                     spaceBetween: 16,
-//                 }
-//             }
-//         });
-//     } 
-// };
-
-// window.addEventListener('load', function () {
-//     windowWidthControl();
-// })
-
-// window.addEventListener('resize', function () {
-//     windowWidthControl();
-// })
+//         },
+//         768: {
+//             enabled: false,
+//         }
+//     }
+// });
 
 
+let mySwiper;
 
+const swipers = document.querySelectorAll('.swiper');
+
+const item = document.querySelectorAll('.items');
+
+
+console.log(swipers);
+
+const ipadVisibleItems = [];
+const ipadHiddenItems = [];
+
+const desktopVisibleItems = [];
+const desktopHiddenItems = [];
+
+
+function windowWidthControl() {
+    if(window.screen.width < 365) {
+        if(mySwiper = true) {
+            let mySwiper = new Swiper('.swiper', {
+                    direction: 'horizontal',
+                    loop: true,
+                    spaceBetween: 16,
+                    slidesPerView: 1.31,
+                    variableWidth: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                        type: 'bullets',
+                        bulletClass: 'swiper-pagination-bullet',
+                        bulletActiceClass: 'swiper-pagination-bullet-active',
+                    },
+                    breakpoints: {
+                        400: {
+                            slidesPerView: 1.8,
+                            spaceBetween: 16,
+                        },
+                        768: {
+                            enabled: false,
+                        }
+                    }
+        })
+    } 
+    } else if(window.screen.width > 768) {
+    }}
+
+window.addEventListener('resize', function () {
+    windowWidthControl();
+})
+
+
+
+//* Не удалять!!!
 const items = document.querySelectorAll('.hidden');
 console.log(items);
 
@@ -88,7 +105,7 @@ btn.addEventListener('click', function(event) {
         text.textContent = 'Показать все';
     }
 })
-
+//
 
 
 // const Swiper = document.querySelector('.swiper').swiper;
