@@ -42,7 +42,7 @@ const desktopHiddenItems = [];
 
 
 function windowWidthControl() {
-    if(window.screen.width < 365) {
+    if(window.screen.width < '768') {
         if(mySwiper = true) {
             let mySwiper = new Swiper('.swiper', {
                     direction: 'horizontal',
@@ -58,17 +58,12 @@ function windowWidthControl() {
                         bulletActiceClass: 'swiper-pagination-bullet-active',
                     },
                     breakpoints: {
-                        400: {
-                            slidesPerView: 1.8,
-                            spaceBetween: 16,
-                        },
                         768: {
                             enabled: false,
                         }
                     }
         })
     } 
-    } else if(window.screen.width > 768) {
     }}
 
 window.addEventListener('resize', function () {
