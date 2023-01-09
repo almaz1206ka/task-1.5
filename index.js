@@ -70,6 +70,10 @@ window.addEventListener('resize', function () {
     windowWidthControl();
 })
 
+window.addEventListener('load', function(){
+    windowWidthControl();
+})
+
 
 
 //* Не удалять!!!
@@ -102,20 +106,12 @@ btn.addEventListener('click', function(event) {
 })
 //
 
+const swiperSlide = document.querySelectorAll('.swiper-slide');
 
-// const Swiper = document.querySelector('.swiper').swiper;
+console.log(swiperSlide);
 
-
-// const item = document.querySelectorAll('.items');
-// console.log(item);
-// const ipadVisibleItems = [];
-// const ipadHiddenItems = [];
-
-// const desktopVisibleItems = [];
-// const desktopHiddenItems = [];
-
-// function windowWidthControl() {
-//     if(window.screen.width > '760'){
-
-//     } else{swiper.remove}
-// }
+for (const slide of swiperSlide) {
+    slide.addEventListener('resize', () => {
+        slide.classList.remove('swiper-slide')
+    })
+}
